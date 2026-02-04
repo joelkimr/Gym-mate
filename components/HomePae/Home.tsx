@@ -22,7 +22,7 @@ function Hero() {
       <div className="absolute inset-0 bg-black/40 z-0" />
 
       {/* Main content */}
-      <div className="relative z-10 max-w-[1320px] mx-auto px-5 sm:px-6 lg:px-8 min-h-screen flex items-center">
+      <div className="relative z-10 max-w-[1320px] mx-auto px-20 sm:px-14 lg:px-8 min-h-screen flex items-center justify-end ">
         <div className="text-white max-w-[640px]">
           {/* FIND YOUR ENERGY */}
           <div className="relative inline-block mb-5 sm:mb-6">
@@ -63,16 +63,13 @@ function Hero() {
             <MainButton />
           </div>
         </div>
-      </div>
-
-      {/* Share bar (desktop only) */}
-      <div
+          <div
         className="
-        absolute -right-24 lg:right-0 top-1/2 -translate-y-1/2 z-20
+        absolute -right-[130px]  top-1/2 -translate-y-1/2 z-20
         hidden md:flex items-center gap-6 rotate-90
-      "
-      >
-        <p className="uppercase text-[12px] font-bold tracking-[0.3em] text-white">
+        "
+        >
+        <p className="uppercase text-[12px] font-bold tracking-[1rem] text-white">
           share
         </p>
 
@@ -84,6 +81,10 @@ function Hero() {
           <FaInstagram className="-rotate-90 hover:text-pink-500 transition" />
         </div>
       </div>
+
+      {/* Share bar (desktop only) */}
+      
+        </div>
     </section>
   );
 }
