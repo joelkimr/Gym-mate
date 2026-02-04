@@ -34,6 +34,14 @@ export default function NavBar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+  document.body.style.overflow = menuOpen ? 'hidden' : '';
+  return () => {
+    document.body.style.overflow = '';
+  };
+}, [menuOpen]);
+
+
   return (
     <nav
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300
@@ -114,12 +122,20 @@ export default function NavBar() {
   />
 
   {/* SLIDE PANEL */}
-<div
+{/* <div
   className={`absolute left-0 top-0 h-full w-full bg-black
   transform transition-transform duration-300 ease-in-out
   ${menuOpen ? 'translate-x-0 ' : '-translate-x-full'}
 `}
+> */}
+<div
+  className={`absolute left-0 top-0 h-screen w-full bg-black
+  overflow-y-auto overflow-x-hidden
+  transform transition-transform duration-300 ease-in-out
+  ${menuOpen ? 'translate-x-0' : '-translate-x-full'}
+`}
 >
+
 
     {/* HEADER */}
     <div className="flex items-center justify-between px-6 py-2 border-b border-red-900">
@@ -139,7 +155,7 @@ export default function NavBar() {
     </div>
 
     {/* NAV LINKS */}
-    <nav className="px-6 py-11 bg-black">
+    <nav className="px-6 py-11 bg-black min-h-full">
       <ul className="flex flex-col gap-6 items-center text-white text-lg font-medium">
         {navLinks.map((link) => (
           <li key={link.title}>
@@ -161,13 +177,13 @@ export default function NavBar() {
           onClick={() => setMenuOpen(false)}
           className="flex items-center gap-2 text-white text-lg"
         >
-          <MdPerson /> Login
+          <MdPerson className='text-3xl'/> Login
         </Link>
 
         <Link
           href="/joinClass"
           onClick={() => setMenuOpen(false)}
-          className="flex items-center gap-2 border border-[#f73f36] px-4 py-3 rounded-md"
+          className="flex items-center gap-2 border border-red-800 px-4 py-3 rounded-sm"
         >
           <FiPlus className="text-white" />
           <span className="uppercase text-white text-sm">
