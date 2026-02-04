@@ -1,13 +1,34 @@
-import React from "react";
 import Link from "next/link";
 
 function MainButton() {
   return (
     <Link
       href="/schedule"
-      className="lg:text-base md:text-xl text-5xl flex justify-center items-center text-black bg-white font-[600] lg:w-56 md:w-64 w-[28rem] lg:h-14 md:h-20 h-32 uppercase md:ml-32 ml-20 hover:bg-[#FF0336] hover:text-white transition duration-300 rounded-md"
+      className="
+        inline-flex items-center justify-center
+        bg-white text-black font-semibold uppercase
+        rounded-md transition duration-300
+        hover:bg-[#FF0336] hover:text-white
+
+        /* Typography */
+        text-[13px]
+        sm:text-[14px]
+        md:text-[15px]
+
+        /* Size */
+        h-9
+        sm:h-12
+        md:h-12
+        w-32
+        sm:w-48
+        md:w-44
+
+        /* Alignment */
+        ml-0
+        sm:ml-0
+      "
     >
-      our classes &nbsp;
+      our classes
     </Link>
   );
 }

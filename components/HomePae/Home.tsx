@@ -1,51 +1,90 @@
-import TitleBg from "../../images/pricing/titlebg.svg";
-
-import MainButton from "./MainButton";
 import Image from "next/image";
+import TitleBg from "../../images/pricing/titlebg.svg";
+import MainButton from "./MainButton";
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 import { AiOutlineTwitter } from "@react-icons/all-files/ai/AiOutlineTwitter";
 import { SiFacebook } from "@react-icons/all-files/si/SiFacebook";
+import HeroImage from "../../images/hero/hero-img.jpg";
 
 function Hero() {
   return (
-    <>
-      <section className="hero-section">
-        <div className="container-hero border border-green-500 flex flex-row justify-between ">
-          <div className="flex flex-col text-white justify-center h-full">
-            <div className="relative inline-block">
-              {/* Background image */}
-              <Image src={TitleBg} alt="text_bg" className="block" />
+    <section className="relative min-h-screen w-full bg-black overflow-hidden">
+      {/* Background image */}
+      <Image
+        src={HeroImage}
+        alt="Hero background"
+        fill
+        priority
+        className="object-cover object-center"
+      />
 
-              {/* Text on top of image */}
-              <p className="absolute inset-0 flex items-center text-white uppercase font-medium lg:text-sm md:text-xl text-[43px] pl-9 z-10">
-                find your energy
-              </p>
-            </div>
+      {/* Overlay (contrast) */}
+      <div className="absolute inset-0 bg-black/40 z-0" />
 
-            <h1 className="font-bold uppercase mb-16 text-[42px] md:text-[60px] lg:text-[80px]">
-              make your body <br />
-              <span className="font-thin">fit & perfect</span>
-            </h1>
+      {/* Main content */}
+      <div className="relative z-10 max-w-[1320px] mx-auto px-5 sm:px-6 lg:px-8 min-h-screen flex items-center">
+        <div className="text-white max-w-[640px]">
+          {/* FIND YOUR ENERGY */}
+          <div className="relative inline-block mb-5 sm:mb-6">
+            <Image src={TitleBg} alt="" className="w-[180px] sm:w-[200px]" />
+            <p className="absolute inset-0 flex items-center pl-6 uppercase text-[11px] sm:text-[13px] font-semibold tracking-wider">
+              find your energy
+            </p>
+          </div>
 
+          {/* Heading */}
+          <h1
+            className="
+              uppercase font-extrabold leading-[1.05]
+              text-[32px]
+              sm:text-[42px]
+              md:text-[56px]
+              lg:text-[72px]
+              xl:text-[82px]
+            "
+          >
+            make your body
+          </h1>
+
+          <h2
+            className="
+              uppercase font-light mt-1 sm:mt-2
+              text-[22px]
+              sm:text-[28px]
+              md:text-[38px]
+              lg:text-[52px]
+            "
+          >
+            fit & perfect
+          </h2>
+
+          {/* CTA */}
+          <div className="mt-8 sm:mt-10 lg:mt-12">
             <MainButton />
           </div>
-              <div className="text-white">
-                here
-              </div>
-          {/* <div className="right-0 bottom-1/2 translate-y-1/2 flex flex-row-reverse items-center -rotate-90 text-white">
-            <p className="uppercase lg:text-md md:text-sm font-bold tracking-widest cursor-default">
-              share
-            </p>
-            <span className="w-[35px] bg-[#FF0336] h-[2.5px] mr-4"></span>
-            <div className="text-white gap-7 flex mr-4">
-              <SiFacebook className="rotate-90 hover:text-blue-800 lg:text-2xl md:text-2xl ease-in duration-200" />
-              <AiOutlineTwitter className="rotate-90 hover:text-sky-500 lg:text-2xl md:text-2xl ease-in duration-200" />
-              <FaInstagram className="rotate-90 hover:text-secondary lg:text-2xl md:text-2xl ease-in duration-200" />
-            </div>
-          </div> */}
         </div>
-      </section>
-    </>
+      </div>
+
+      {/* Share bar (desktop only) */}
+      <div
+        className="
+        absolute -right-24 lg:right-0 top-1/2 -translate-y-1/2 z-20
+        hidden md:flex items-center gap-6 rotate-90
+      "
+      >
+        <p className="uppercase text-[12px] font-bold tracking-[0.3em] text-white">
+          share
+        </p>
+
+        <span className="w-10 h-[2px] bg-[#FF0336]" />
+
+        <div className="flex gap-7 text-[20px] text-white">
+          <SiFacebook className="-rotate-90 hover:text-blue-600 transition" />
+          <AiOutlineTwitter className="-rotate-90 hover:text-sky-500 transition" />
+          <FaInstagram className="-rotate-90 hover:text-pink-500 transition" />
+        </div>
+      </div>
+    </section>
   );
 }
 

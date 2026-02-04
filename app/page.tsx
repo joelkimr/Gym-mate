@@ -12,7 +12,7 @@ import Footer from "@/components/Footer/footer";
 export default function Home() {
   return (
     <div className='w-full h-auto'>
-        {/* <HomePage /> */}
+        <HomePage />
         {/* <About />
         <Featured/>
         <ChooseUs/>

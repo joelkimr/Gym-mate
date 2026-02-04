@@ -45,7 +45,7 @@ export default function NavBar() {
   return (
     <nav
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300
-      ${isSticky ? 'bg-black shadow-lg' : 'bg-black backdrop-blur h-16'}
+      ${isSticky ? 'bg-black shadow-lg' : 'h-16'}
       `}
     >
       {/* ================= CONTAINER ================= */}
@@ -63,7 +63,7 @@ export default function NavBar() {
           </Link>
 
           {/* DESKTOP NAV */}
-          <ul className="hidden lg:flex flex-wrap items-center gap-x-8 gap-y-2 text-white font-medium">
+          <ul className="hidden lg:flex flex-wrap items-center gap-x-8 gap-y-2 text-white font-semibold">
             {navLinks.map((link) => (
               <li key={link.title}>
                 <Link
@@ -156,7 +156,7 @@ export default function NavBar() {
 
     {/* NAV LINKS */}
     <nav className="px-6 py-11 bg-black min-h-full">
-      <ul className="flex flex-col gap-6 items-center text-white text-lg font-medium">
+      <ul className="flex flex-col gap-6 items-center text-white text-lg font-medium text-sm">
         {navLinks.map((link) => (
           <li key={link.title}>
             <Link
@@ -175,7 +175,7 @@ export default function NavBar() {
         <Link
           href="/login"
           onClick={() => setMenuOpen(false)}
-          className="flex items-center gap-2 text-white text-lg"
+          className="flex items-center gap-2 text-white text-md"
         >
           <MdPerson className='text-3xl'/> Login
         </Link>
@@ -186,7 +186,7 @@ export default function NavBar() {
           className="flex items-center gap-2 border border-red-800 px-4 py-3 rounded-sm"
         >
           <FiPlus className="text-white" />
-          <span className="uppercase text-white text-sm">
+          <span className="uppercase text-white text-xs">
             Join Class
           </span>
         </Link>
