@@ -32,12 +32,16 @@ function About() {
             <div className="relative lg:flex lg:flex-row xl:justify-around lg:justify-center xl:mx-0 absolute xl:gap-9 lg:gap-16 md:items-center pb-9">
               <div className="lg:w-2/5 md:w-3/4 mx-auto flex flex-col mt-12">
                 <div className=" text-center">
-                 <div className="relative inline-block mb-5 sm:mb-6">
-            <Image src={TitleBg} alt="" className="w-[180px] sm:w-[200px]" />
-            <p className="absolute inset-0 flex items-center pl-6 uppercase text-[13px] ml-5 sm:text-[13px] text-white font-semibold tracking-wider">
-              who we are
-            </p>
-          </div>
+                  <div className="relative inline-block mb-5 sm:mb-6">
+                    <Image
+                      src={TitleBg}
+                      alt=""
+                      className="w-[180px] sm:w-[200px]"
+                    />
+                    <p className="absolute inset-0 flex items-center pl-10 uppercase text-[13px] ml-5 sm:text-[13px] text-white font-semibold tracking-wider">
+                      who we are
+                    </p>
+                  </div>
                   <h2 className="md:text-4xl font-bold md:mb-4 text-3xl md:mt-9 text-center lg:text-4xl p-2">
                     Take Your Health And Body To Next Level
                   </h2>
@@ -53,7 +57,7 @@ function About() {
 
                 <Link href="/gallery">
                   {" "}
-                  <div className="bg-black/80 lg:w-44 md:w-52 w-44 text-center lg:text-sm md:text-lg text-md text-white font-semibold md:p-3 p-3 hover:bg-red-500 transition duration-300 rounded-md mx-auto md:mt-8 mt-2">
+                  <div className="bg-black/80 lg:w-44 md:w-52 w-44 text-center lg:text-sm md:text-lg text-[13px] text-white font-semibold md:p-3 p-3 hover:bg-red-500 transition duration-300 rounded-md mx-auto md:mt-8 mt-2">
                     TAKE A TOUR
                   </div>
                 </Link>

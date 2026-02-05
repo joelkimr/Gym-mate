@@ -14,8 +14,8 @@ export default function Home() {
     <div className='w-full h-auto'>
         <HomePage />
          <About />
-        {/*<Featured/>
-        <ChooseUs/>
+        <Featured/>
+        {/*<ChooseUs/>
         <Trainers/>
         <Gallery/>
         <Pricing/>
