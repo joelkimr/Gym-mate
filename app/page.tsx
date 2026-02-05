@@ -15,8 +15,8 @@ export default function Home() {
         <HomePage />
          <About />
         <Featured/>
-        {/*<ChooseUs/>
-        <Trainers/>
+        <ChooseUs/>
+        {/*<Trainers/>
         <Gallery/>
         <Pricing/>
         <Blog/>
