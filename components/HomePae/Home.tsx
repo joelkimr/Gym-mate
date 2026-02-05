@@ -63,28 +63,27 @@ function Hero() {
             <MainButton />
           </div>
         </div>
-          <div
-        className="
+        <div
+          className="
         absolute -right-[130px]  top-1/2 -translate-y-1/2 z-20
         hidden md:flex items-center gap-6 rotate-90
         "
         >
-        <p className="uppercase text-[12px] font-bold tracking-[1rem] text-white">
-          share
-        </p>
+          <p className="uppercase text-[12px] font-bold tracking-[1rem] text-white">
+            share
+          </p>
 
-        <span className="w-10 h-[2px] bg-[#FF0336]" />
+          <span className="w-10 h-[2px] bg-[#FF0336]" />
 
-        <div className="flex gap-7 text-[20px] text-white">
-          <SiFacebook className="-rotate-90 hover:text-blue-600 transition" />
-          <AiOutlineTwitter className="-rotate-90 hover:text-sky-500 transition" />
-          <FaInstagram className="-rotate-90 hover:text-pink-500 transition" />
+          <div className="flex gap-7 text-[20px] text-white">
+            <SiFacebook className="-rotate-90 hover:text-blue-600 transition" />
+            <AiOutlineTwitter className="-rotate-90 hover:text-sky-500 transition" />
+            <FaInstagram className="-rotate-90 hover:text-pink-500 transition" />
+          </div>
         </div>
+
+        {/* Share bar (desktop only) */}
       </div>
-
-      {/* Share bar (desktop only) */}
-      
-        </div>
     </section>
   );
 }
