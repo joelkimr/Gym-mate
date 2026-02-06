@@ -5,6 +5,7 @@ import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 import { AiOutlineTwitter } from "@react-icons/all-files/ai/AiOutlineTwitter";
 import { SiFacebook } from "@react-icons/all-files/si/SiFacebook";
 import HeroImage from "../../images/hero/hero-img.jpg";
+import ScrollToTop from "../utils/scrollToTop";
 
 function Hero() {
   return (
@@ -84,6 +85,7 @@ function Hero() {
 
         {/* Share bar (desktop only) */}
       </div>
+      <ScrollToTop/>
     </section>
   );
 }
