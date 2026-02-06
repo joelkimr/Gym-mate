@@ -16,12 +16,14 @@ export default function Home() {
          <About />
         <Featured/>
         <ChooseUs/>
-        {/*<Trainers/>
-        <Gallery/>
-        <Pricing/>
-        <Blog/>
-        <CallBanner/>
-        <Footer/> */}
+        <Trainers/>
+        < div className="md:block hidden">
+       <Gallery/>
+       </div>
+       <Pricing/>
+       <Blog/>
+       <CallBanner/>
+           <Footer/>
       </div>
   );
 }

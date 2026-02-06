@@ -10,7 +10,7 @@ function Footer() {
     <>
       <footer className="bg-white w-full">
         <div className="container page-padding py-16">
-          <div className="flex flex-col md:flex-row md:justify-between gap-8 items-start text-left w-full">
+          <div className="flex flex-col md:flex-row md:justify-between md:gap-32 gap-2 items-start text-left w-full">
             <div className="flex flex-col md:w-1/3 w-full gap-4">
               <div className="space-y-4">
                 <Image src={FooterLogo} alt="footer_logo" className="w-44 h-auto" />
