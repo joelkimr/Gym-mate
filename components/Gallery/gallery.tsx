@@ -14,19 +14,21 @@ function Gallery() {
 
         <div className="container page-padding py-12">
           <div className="flex flex-col text-center relative items-center ">
-            <p className="text-white relative z-10 md:text-lg lg:text-sm uppercase font-bold md:mb-10 text-4xl md:pt-0 pt-5 md:ml-0 ml-3">
-              GYM GALLERY
-            </p>
-            <Image
-              src={TitleRed}
-              alt="title"
-              className="md:w-64 w-[35rem] lg:w-44 absolute -top-1 md:ml-0 ml-1"
-            />
+              <div className="relative inline-block mb-5 sm:mb-6">
+                    <Image
+                      src={TitleRed}
+                      alt=""
+                      className="w-[180px] sm:w-[200px]"
+                    />
+                    <p className="absolute inset-0 flex items-center pl-5 uppercase text-[13px] ml-5 sm:text-[13px] text-white font-semibold tracking-wider">
+                      gym gallery
+                    </p>
+                  </div>
 
-            <h2 className="md:text-4xl lg:text-4xl font-bold md:mb-4 text-7xl md:mt-0 mt-24">
+            <h2 className="md:text-4xl lg:text-4xl font-bold md:mb-4 text-4xl md:mt-0 mt-4">
               Our Workplace Gallery
             </h2>
-            <p className="text-[#646464] lg:text-sm md:text-lg text-4xl md:mt-0 mt-12">
+            <p className="text-[#646464] lg:text-sm md:text-lg text-lg md:mt-0 mt-4 -m-7">
               Our Workplace Gallery features modern office, team collaboration,
               and fun culture.
               <br /> Attracts talents and showcases company{`'`}s work
@@ -34,7 +36,7 @@ function Gallery() {
             </p>
           </div>
 
-          <div className="gallery-grid py-16 w-full h-auto relative ">
+          <div className="gallery-grid  py-16 w-full h-auto relative">
             <div id="item-0"></div>
             <div id="item-1"></div>
             <div id="item-2"></div>

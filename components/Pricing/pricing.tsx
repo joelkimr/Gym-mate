@@ -20,24 +20,26 @@ function Pricing() {
             alt="bg_img"
           />
           <div className="flex flex-col text-center relative items-center">
-            <p className="text-white relative z-10 md:text-lg uppercase font-bold md:mb-10 lg:text-sm text-4xl md:pt-0 pt-3 lg:pt-0 md:ml-0 ml-3">
-              PRICING CHART
-            </p>
-            <Image
-              src={TitleRed}
-              alt="text_bg"
-              className="md:w-64 w-[30rem] lg:w-44 absolute -top-1 md:ml-0 ml-1"
-            />
+             <div className="relative inline-block mb-5 sm:mb-6">
+                    <Image
+                      src={TitleRed}
+                      alt=""
+                      className="w-[180px] sm:w-[200px]"
+                    />
+                    <p className="absolute inset-0 flex items-center pl-5 uppercase text-[13px] ml-5 sm:text-[13px] text-white font-semibold tracking-wider">
+                      pricing charts
+                    </p>
+                  </div>
 
-            <h2 className="md:text-4xl lg:text-4xl font-bold md:mb-4 text-7xl md:mt-0 mt-24">
+            <h2 className="md:text-4xl lg:text-4xl font-bold md:mb-4 text-4xl md:mt-0 mt-2 -m-9">
               Exclusive Pricing Plan
             </h2>
-            <p className="text-[#646464] md:text-lg lg:text-sm text-4xl md:mt-0 mt-12">
+            <p className="text-[#646464] md:text-lg lg:text-xl text-lg md:mt-0 mt-12 -m-7">
               Gymate an unknown printer took a galley of type and scrambled make
               a type specimen book.
             </p>
           </div>
-          <div className="md:flex md:flex-row flex flex-col items-center md:gap-10 gap-20 mt-16 relative z-[2]">
+          <div className="md:flex md:flex-row flex flex-col items-center gap-5 mt-12 md:mt-20 relative z-[2]">
             <PricingCard img={Img1} price="39" title="Beginner" />
             <PricingCard img={Img2} price="65" title="Advanced" />
             <PricingCard img={Img3} price="100" title="Professional" />
