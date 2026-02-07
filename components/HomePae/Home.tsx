@@ -23,12 +23,12 @@ function Hero() {
       <div className="absolute inset-0 bg-black/40 z-0" />
 
       {/* Main content */}
-      <div className="relative z-10 max-w-[1320px] mx-auto px-20 sm:px-14 lg:px-8 min-h-screen flex items-center justify-end ">
-        <div className="text-white max-w-[640px]">
+      <div className="relative z-10 max-w-[1320px] mx-auto px-2 sm:px-14 lg:px-8 min-h-screen flex items-center justify-end ">
+        <div className="text-white md:max-w-[640px] max-w-[740px] text-center md:text-left">
           {/* FIND YOUR ENERGY */}
           <div className="relative inline-block mb-5 sm:mb-6">
             <Image src={TitleBg} alt="" className="w-[180px] sm:w-[200px]" />
-            <p className="absolute inset-0 flex items-center pl-6 uppercase text-[11px] sm:text-[13px] font-semibold tracking-wider">
+            <p className="absolute inset-0 flex items-center md:pl-6 pl-10 uppercase text-[11px] sm:text-[13px] font-semibold tracking-wider">
               find your energy
             </p>
           </div>
@@ -37,7 +37,7 @@ function Hero() {
           <h1
             className="
               uppercase font-extrabold leading-[1.05]
-              text-[32px]
+              text-[52px]
               sm:text-[42px]
               md:text-[56px]
               lg:text-[72px]
